@@ -12,16 +12,16 @@ Output: Minimum number of swaps required to seat all couples together.
 
 1. Create a dictionary position mapping each person to their index in row and initialize swaps to 0.
 2. Define a function partner(person):
-    i If person is even, return person + 1 (its partner).
-    ii. If person is odd, return person - 1 (its partner).
+    1. If person is even, return person + 1 (its partner).
+    2. If person is odd, return person - 1 (its partner).
 3. Iterate through the list in steps of 2:
-    i. Let first_person = row[i] and second_person = row[i + 1].
-    ii. Compute correct_partner = partner(first_person).
-    iii. If second_person != correct_partner, perform a swap:
-        a. Locate correct_partner in row using position.
-        b. Swap row[i + 1] and row[partner_index].
-        c. Update position dictionary accordingly.
-        d. Increment swaps.
+    1. Let first_person = row[i] and second_person = row[i + 1].
+    2. Compute correct_partner = partner(first_person).
+    3. If second_person != correct_partner, perform a swap:
+        1. Locate correct_partner in row using position.
+        2. Swap row[i + 1] and row[partner_index].
+        3. Update position dictionary accordingly.
+        4. Increment swaps.
 4. Return swaps.
 
 ### Mathmatical Analysis and Big-O
