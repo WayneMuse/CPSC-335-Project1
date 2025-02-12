@@ -9,8 +9,9 @@ def main():
         if algchoice == '1':
             print("======================================")
             print("Greedy Approach to Hamiltonian Problem")
-            citydistances = input("city_distances: ").split()
-            Fuel = input("Fuel: ").split()
+            citydistances = input("city_distances: ")
+            Fuel = list(map(int, input("Fuel: ").split()))
+            print(Fuel[0], type(Fuel[0]))
             Mpg = int(input("Mpg: "))
             print("Starting City is", find_starting(city_distances=citydistances,fuel=Fuel,mpg=Mpg))   
             print()

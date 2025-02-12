@@ -1,4 +1,7 @@
-def find_starting(city_distances=[], fuel=[], mpg=int) -> int:
+def find_starting(city_distances=None, fuel=None, mpg=1) -> int:
+    if city_distances is None or fuel is None:
+        return -1
+
     n = len(city_distances)
 
         
@@ -32,10 +35,10 @@ def find_starting(city_distances=[], fuel=[], mpg=int) -> int:
         return -1
     
 # Sample Input
-city_distances = [5, 25, 15, 10, 15]
-fuel = [1, 2, 1, 0, 3]
-mpg = 10
+#city_distances = [5, 25, 15, 10, 15]
+#fuel = [1, 2, 1, 0, 3]
+#mpg = 10
 
 # Output the preferred starting city
-preferred_city = find_starting(city_distances, fuel, mpg)
-print("The preferred starting city is:", preferred_city)
+#preferred_city = find_starting(city_distances, fuel, mpg)
+#print("The preferred starting city is:", preferred_city)
