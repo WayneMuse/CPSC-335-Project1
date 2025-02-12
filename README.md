@@ -1,9 +1,57 @@
-# CPSC-335-Project1
+# CPSC-335-Project1 
 Spring 2025 CPSC 335 - Algorithm Engineering Due: 02/28
+Wayne Muse - 88601211
+waynemuse@csu.fullerton.edu
+https://github.com/WayneMuse/CPSC-335-Project1
 
-To run the CPSC-335 Project, just run main.py and bring up the menu and choose which algorithm you want to test.
-When inputing an array of numbers do not write them with the brackets, write it as simply the numbers seperated by the commas 5, 25, 15, 10, 15
+## Running Project1
+1. Run the Program
+    1. Execute main.py to start the program.
+    2. A menu will appear, allowing you to select which algorithm you want to test.
+2. Choosing an Algorithm
+    1. Enter 1 to test Algorithm 1: Greedy Approach to Hamiltonian Problem.
+    2. Enter 2 to test Algorithm 2: Connecting Pairs of Persons.
+    3. Enter 3 to exit the program.
+2. Input Format
+    1. When entering an array of numbers, do not use brackets [ ].
+    2. Instead, enter the numbers separated by spaces.
+    3. Example: don't: [5,25,15,10,15]  do: 5 25 15 10 15
 
+## Algorithm 1: Greedy Approach to Hamiltonian Problem
+### Pseudocode
+Input:
+- city_distances: List of distances between neighboring cities.
+- fuel: List of fuel available at each city.
+- mpg: integer miles per gallon the car can travel.
+
+Output:
+- Index of the preferred starting city.
+
+1. Initialize Variables:
+    - total_fuel = 0
+    - total_distance = 0
+    - current_tank = 0
+    - start_city = 0
+
+2. Iterate over all cities (i = 0 to n - 1):
+    1. Compute fuel_gained = fuel[i] * mpg
+    2. Compute distance_needed = city_distances[i]
+3. Update variables
+    1. Update total_fuel += fuel_gained
+    2. Update total_distance += distance_needed
+    3. Update current_tank += fuel_gained - distance_needed
+4. If current_tank < 0:
+    1. Set start_city = i + 1
+    2. Reset current_tank = 0
+5. Check Validity:
+    1. If total_fuel >= total_distance, return start_city
+    2. Otherwise, return -1
+
+### Mathematical Analysis and Big-O Complexity
+Iterating through the cities takes O(n) time.
+Each lookup and arithmetic operation is O(1).
+Space complexity: O(1) (constant space usage).
+Overall time complexity: O(n).
 
 ## Algorithm 2 Connecting Pairs of Persons 
 ### Pesudocode
@@ -24,7 +72,7 @@ Output: Minimum number of swaps required to seat all couples together.
         4. Increment swaps.
 4. Return swaps.
 
-### Mathmatical Analysis and Big-O
+### Mathematical Analysis and Big-O Complexity
 Constructing position takes O(n) time.
 The loop runs O(n) times, and each swap operation takes O(1) due to dictionary lookups.
 Space complexity is O(n) due to the position dictionary.

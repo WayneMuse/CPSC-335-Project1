@@ -25,5 +25,5 @@ def min_swaps(row):
     
     return swaps
 
-inputrow = [0,2,1,3]
-print(min_swaps(inputrow))
+#assert min_swaps([0, 2, 1, 3]) == 1
+#assert min_swaps([3, 2, 0, 1]) == 0
