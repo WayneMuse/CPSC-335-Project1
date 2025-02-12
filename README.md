@@ -5,8 +5,8 @@ To run the CPSC-335 Project, just run main.py and bring up the menu and choose w
 When inputing an array of numbers do not write them with the brackets, write it as simply the numbers seperated by the commas 5, 25, 15, 10, 15
 
 
-# Algorithm 2 Connecting Pairs of Persons 
-## Pesudocode
+## Algorithm 2 Connecting Pairs of Persons 
+### Pesudocode
 Input: A list row of 2n individuals representing seat arrangements in integer format.
 Output: Minimum number of swaps required to seat all couples together.
 
@@ -24,7 +24,7 @@ Output: Minimum number of swaps required to seat all couples together.
         d. Increment swaps.
 4. Return swaps.
 
-## Mathmatical Analysis and Big-O
+### Mathmatical Analysis and Big-O
 Constructing position takes O(n) time.
 The loop runs O(n) times, and each swap operation takes O(1) due to dictionary lookups.
 Space complexity is O(n) due to the position dictionary.
