@@ -1,5 +1,5 @@
 from alg1 import find_starting
-import alg2
+from alg2 import min_swaps
 
 def main():
     cont = True
@@ -8,8 +8,8 @@ def main():
         algchoice = input("Type 1 for Algorithm 1: Greedy Approach to Hamiltonian Problem\n" "Type 2 for Algorithm 2: Connecting Pairs of Persons\n" "Type 3 to Exit\n")
         if algchoice == '1':
             print("======================================")
-            print("Greedy Approach to Hamiltonian Problem")
-            citydistances = input("city_distances: ")
+            print("Greedy Approach to Hamiltonian Problem\n")
+            citydistances = list(map(int, input("City Distances: ").split()))
             Fuel = list(map(int, input("Fuel: ").split()))
             print(Fuel[0], type(Fuel[0]))
             Mpg = int(input("Mpg: "))
@@ -17,19 +17,20 @@ def main():
             print()
         elif algchoice == '2':
             print("======================================")
-            print("     Connecting Pairs of Persons      ")
-
+            print("     Connecting Pairs of Persons      \n")
+            input_row = list(map(int, input("Input: ").split()))
+            print("Output: ",min_swaps(input_row))
             print()
         elif algchoice == '3':
             print("======================================")
             print("               Exiting        ")
             cont = False
         else:
-            print("Invalid input, try again")
+            print("\n+++++++++++[Invalid input, try again]++++++++++++\n")
 
 if __name__ == "__main__":
     main()
-
+    
 ###main
     ##while continue loop
     ##prompt user input

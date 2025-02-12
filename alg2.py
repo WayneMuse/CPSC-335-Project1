@@ -1,15 +1,29 @@
-'''
-input_string = input('Enter elements of a list separated by space \n')
-user_list = input_string.split()
-print('string list: ', user_list)
+def min_swaps(row):
+    # Map each person to their position in the row
+    position = {person: i for i, person in enumerate(row)}
+    swaps = 0
+    
+    def partner(person):
+        """Returns the partner ID of a given person."""
+        return person - 1 if person % 2 else person + 1
+    
+    for i in range(0, len(row), 2):
+        first_person = row[i]
+        second_person = row[i + 1]
+        correct_partner = partner(first_person)
+        
+        if second_person != correct_partner:
+            swaps += 1
+            partner_index = position[correct_partner]
+            
+            # Swap second_person with the correct partner
+            row[i + 1], row[partner_index] = row[partner_index], row[i + 1]
+            
+            # Update positions in the map
+            position[second_person] = partner_index
+            position[correct_partner] = i + 1
+    
+    return swaps
 
-# convert each item to int type
-for i in range(len(user_list)):
-    # convert each item to int type
-    if user_list[i] != ',':
-        user_list[i] = int(user_list[i])
-
-print('User list: ', user_list)
-# Calculating the sum of list elements
-print("Sum = ", sum(user_list))
-'''
+inputrow = [0,2,1,3]
+print(min_swaps(inputrow))
