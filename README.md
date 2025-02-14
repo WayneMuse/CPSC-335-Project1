@@ -1,8 +1,8 @@
 # CPSC-335-Project1 
-Spring 2025 CPSC 335 - Algorithm Engineering Due: 02/28
-Wayne Muse - 88601211
-waynemuse@csu.fullerton.edu
-https://github.com/WayneMuse/CPSC-335-Project1
+Spring 2025 CPSC 335 - Algorithm Engineering Due: 02/28 <br />
+Wayne Muse - 88601211 <br />
+waynemuse@csu.fullerton.edu <br />
+https://github.com/WayneMuse/CPSC-335-Project1 <br />
 
 ### Running Project1
 1. Run the Program
@@ -15,7 +15,7 @@ https://github.com/WayneMuse/CPSC-335-Project1
 2. Input Format
     1. When entering an array of numbers, do not use brackets [ ].
     2. Instead, enter the numbers separated by spaces.
-    3. Example: don't: [5,25,15,10,15]  do: 5 25 15 10 15
+    3. Example: don't: [5,25,15,10,15]     do: 5 25 15 10 15
 
 ## Algorithm 1: Greedy Approach to Hamiltonian Problem
 ### Pseudocode
