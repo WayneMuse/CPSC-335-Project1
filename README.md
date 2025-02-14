@@ -4,7 +4,7 @@ Wayne Muse - 88601211
 waynemuse@csu.fullerton.edu
 https://github.com/WayneMuse/CPSC-335-Project1
 
-## Running Project1
+### Running Project1
 1. Run the Program
     1. Execute main.py to start the program.
     2. A menu will appear, allowing you to select which algorithm you want to test.
@@ -23,16 +23,13 @@ Input:
 - city_distances: List of distances between neighboring cities.
 - fuel: List of fuel available at each city.
 - mpg: integer miles per gallon the car can travel.
-
 Output:
-- Index of the preferred starting city.
-
+- Index of the preferred starting city
 1. Initialize Variables:
     - total_fuel = 0
     - total_distance = 0
     - current_tank = 0
     - start_city = 0
-
 2. Iterate over all cities (i = 0 to n - 1):
     1. Compute fuel_gained = fuel[i] * mpg
     2. Compute distance_needed = city_distances[i]

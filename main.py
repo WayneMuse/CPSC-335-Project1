@@ -2,31 +2,39 @@ from alg1 import find_starting
 from alg2 import min_swaps
 
 def main():
-    cont = True
-    while cont:
+    while True:
         print("Choose which algorithm question")
         algchoice = input("Type 1 for Algorithm 1: Greedy Approach to Hamiltonian Problem\n" "Type 2 for Algorithm 2: Connecting Pairs of Persons\n" "Type 3 to Exit\n")
         if algchoice == '1':
-            print("======================================")
+            print("\n======================================")
             print("Greedy Approach to Hamiltonian Problem\n")
-            citydistances = list(map(int, input("City Distances: ").split()))
-            Fuel = list(map(int, input("Fuel: ").split()))
-            print(Fuel[0], type(Fuel[0]))
-            Mpg = int(input("Mpg: "))
+            try:
+                citydistances = list(map(int, input("City Distances: ").split()))
+                Fuel = list(map(int, input("Fuel: ").split()))
+                #print(Fuel[0], type(Fuel[0]))
+                Mpg = int(input("Mpg: "))
+            except:
+                print("\n+++++++++++[Invalid input]+++++++++++\n")
+                exit()
             print("Starting City is", find_starting(city_distances=citydistances,fuel=Fuel,mpg=Mpg))   
             print()
         elif algchoice == '2':
-            print("======================================")
+            print("\n======================================")
             print("     Connecting Pairs of Persons      \n")
-            input_row = list(map(int, input("Input: ").split()))
-            print("Output: ",min_swaps(input_row))
-            print()
+            try:
+                input_row = list(map(int, input("Input: ").split()))
+                print("Output: ",min_swaps(input_row))
+                print()
+            except:
+                print("\n+++++++++++[Invalid input]+++++++++++\n")
+                exit()
         elif algchoice == '3':
-            print("======================================")
-            print("               Exiting        ")
-            cont = False
+            print("\n======================================")
+            print("               Exiting        \n")
+            #cont = False
+            exit()
         else:
-            print("\n+++++++++++[Invalid input, try again]++++++++++++\n")
+            print("\n+++++++++++[Invalid input, try again]+++++++++++\n")
 
 if __name__ == "__main__":
     main()

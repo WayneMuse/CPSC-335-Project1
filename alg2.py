@@ -4,7 +4,6 @@ def min_swaps(row):
     swaps = 0
     
     def partner(person):
-        """Returns the partner ID of a given person."""
         return person - 1 if person % 2 else person + 1
     
     for i in range(0, len(row), 2):
