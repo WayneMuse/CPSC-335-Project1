@@ -3,6 +3,8 @@ Spring 2025 CPSC 335 - Algorithm Engineering Due: 02/28 <br />
 Wayne Muse - 88601211 <br />
 waynemuse@csu.fullerton.edu <br />
 https://github.com/WayneMuse/CPSC-335-Project1 <br />
+Marck Villatoro <br />
+marckvillatoro@csu.fullerton.edu <br />
 
 ### Running Project1
 1. Run the Program
